@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+<custom-header></custom-header>
+
+<section id="a-propos">
+    <div class="about-container">
+        <div class="about-photo">
+            <img src="rsc/ProfilPicture.jpg" alt="Votre photo" />
+        </div>
+        <div class="about-text">
+            <h2>À propos de moi</h2>
+
+            <p>
+                Motivé, dynamique et passionné par l'informatique, je vise à devenir enseignant-chercheur dans ce domaine.
+
+                Formé au travail en équipe grâce à mes études, je sais apporter une énergie positive à mes projets et transmettre cette motivation à mes coéquipiers.
+
+                Mes expériences en tutorat et bénévolat ont renforcé mon sens de l’entraide et ma capacité à accompagner les autres vers leurs objectifs.
+
+                Mon ambition est d’accompagner mes futurs élèves en leur donnant les moyens de réussir dans chacun de leurs projets.
+            </p>
+        </div>
+
+        <div class="about-gallery">
+            <h2>Ma vie en image</h2>
+            <div class="gallery">
+                <img src="photo1.jpg" alt="Moment 1">
+                <img src="photo2.jpg" alt="Moment 2">
+                <img src="photo3.jpg" alt="Moment 3">
+                <img src="photo4.jpg" alt="Moment 4">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="projets">
+    <h1>Mes différents projets</h1>
+    <div class="project-cards">
+        <a href="page/EventHorizon/EventHorizon.html" class="card">
+            <h3>Event Horizon</h3>
+            <img src="rsc/BlackHole.png" height="130" width="130" alt="Event Horizon">
+            <p>Jeu vidéo narratif sur le thème des trous noirs</p>
+        </a>
+
+        <a href="page/Recherche/recherche.html" class="card">
+            <h3>Recherche</h3>
+            <img src="rsc/IA_recherche.png" height="130" width="130" alt="Event Horizon">
+            <p>Projet de recherche en IA</p>
+        </a>
+
+        <a href="page/Procedural/Procedural.html" class="card">
+            <h3>3D Procédural</h3>
+            <img src="rsc/Procedural.png" height="130" width="130" alt="Event Horizon">
+            <p>Projet Unity de génération d'un terrain procédural modifiable en temps réel</p>
+        </a>
+
+        <a href="page/Splootan/Splootan.html" class="card">
+            <h3>Splootan</h3>
+            <img src="rsc/Splootan.jpg" height="130" width="130" alt="Event Horizon">
+            <p>Jeu VR sur Unity : Peindre des statues invisibles pour les deviner</p>
+        </a>
+
+        <a href="page/TankMania/TankMania.html" class="card">
+            <h3>TankMania</h3>
+            <img src="rsc/TankMania.png" height="130" width="130" alt="Event Horizon">
+            <p>Jeu sur Unity : Aller le plus loin possible sur une route procédural en esquivant des obstacles</p>
+        </a>
+    </div>
+</section>
+
+<section id="cv">
+    <h2>CV</h2>
+    <div class="cv-container">
+        <iframe src="rsc/CVCharlotEudes.pdf"></iframe>
+    </div>
+    <!-- Lien vers le PDF pour les petits écrans -->
+    <div class="cv-link">
+        <a href="rsc/CVCharlotEudes.pdf" target="_blank">Voir mon CV</a>
+    </div>
+</section>
+
+
+
+<section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+        <input type="text" id="name" placeholder="Votre nom" required>
+        <input type="email" id="email" placeholder="Votre email" required>
+        <textarea id="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+<footer-container></footer-container>
+</body>
+</html>

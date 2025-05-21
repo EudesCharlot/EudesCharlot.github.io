@@ -1,0 +1,221 @@
+/* Réinitialisation globale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Header et navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* Main Content */
+main {
+    margin-top: 70px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Box commune */
+.box {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Box Header */
+.box-header {
+    background-color: #eee;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.box-header h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Contenu de la box */
+.content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content .text {
+    flex: 1;
+    padding: 10px;
+}
+
+.content .image {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.content .image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Gameplay section: disposition alternée */
+.gameplay-box {
+    display: flex;
+    align-items: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.gameplay-box.left .image {
+    order: 1;
+    padding-right: 20px;
+}
+
+.gameplay-box.left .text {
+    order: 2;
+}
+
+.gameplay-box.right .text {
+    order: 1;
+    padding-right: 20px;
+}
+
+.gameplay-box.right .image {
+    order: 2;
+}
+
+/* Effets et Technologies section: grille */
+.effects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.effects-box {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.effects-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ddd;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar a {
+        padding: 10px;
+    }
+    main {
+        padding: 15px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content .text, .content .image {
+        padding: 0;
+    }
+    .content .image {
+        margin-top: 15px;
+    }
+    .effects-grid {
+        grid-template-columns: 1fr;
+    }
+}
